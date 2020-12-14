@@ -78,10 +78,10 @@ import org.apache.plc4x.java.spi.model.DefaultPlcConsumerRegistration;
 import org.apache.plc4x.java.spi.model.DefaultPlcSubscriptionField;
 import org.apache.plc4x.java.spi.model.DefaultPlcSubscriptionHandle;
 import org.apache.plc4x.java.spi.transaction.RequestTransactionManager;
+import org.apache.plc4x.java.spi.values.PlcLINT;
 import org.apache.plc4x.java.spi.values.PlcNull;
 import org.apache.plc4x.java.spi.values.PlcStruct;
 import org.apache.plc4x.java.spi.values.PlcUSINT;
-import org.apache.plc4x.java.spi.values.PlcValues;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -302,7 +302,7 @@ public class CANOpenProtocolLogic extends Plc4xProtocolBase<CANOpenFrame> implem
             if (error != null) {
                 Map<String, ResponseItem<PlcValue>> fields = new HashMap<>();
                 if (error instanceof CANOpenAbortException) {
-                    fields.put(fieldName, new ResponseItem<>(PlcResponseCode.REMOTE_ERROR, PlcValues.of(((CANOpenAbortException) error).getAbortCode())));
+                    fields.put(fieldName, new ResponseItem<>(PlcResponseCode.REMOTE_ERROR, new PlcLINT(((CANOpenAbortException) error).getAbortCode())));
                 } else {
                     fields.put(fieldName, new ResponseItem<>(PlcResponseCode.REMOTE_ERROR, null));
                 }

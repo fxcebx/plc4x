@@ -35,7 +35,7 @@
     <xml>
       <CANOpenTimeSynchronization className="org.apache.plc4x.java.canopen.readwrite.CANOpenTimeSynchronization">
         <timeOfDay className="org.apache.plc4x.java.canopen.readwrite.CANOpenTime">
-          <millis>-663027446</millis>
+          <millis>3631939850</millis>
           <days>13392</days>
         </timeOfDay>
       </CANOpenTimeSynchronization>
@@ -55,7 +55,7 @@
     <xml>
       <CANOpenTimeSynchronization className="org.apache.plc4x.java.canopen.readwrite.CANOpenTimeSynchronization">
         <timeOfDay className="org.apache.plc4x.java.canopen.readwrite.CANOpenTime">
-          <millis>-392494841</millis>
+          <millis>3902472455</millis>
           <days>13392</days>
         </timeOfDay>
       </CANOpenTimeSynchronization>

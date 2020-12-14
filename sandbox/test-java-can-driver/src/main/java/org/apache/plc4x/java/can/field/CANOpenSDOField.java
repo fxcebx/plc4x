@@ -20,6 +20,8 @@ package org.apache.plc4x.java.can.field;
 
 import org.apache.plc4x.java.api.exceptions.PlcInvalidFieldException;
 import org.apache.plc4x.java.canopen.readwrite.types.CANOpenDataType;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -100,6 +102,29 @@ public class CANOpenSDOField extends CANOpenField {
             return Short.parseShort(hex, 16);
         }
         return Short.parseShort(dec);
+    }
+
+    @Override
+    public void xmlSerialize(Element parent) {
+        Document doc = parent.getOwnerDocument();
+        Element messageElement = doc.createElement(getClass().getSimpleName());
+        parent.appendChild(messageElement);
+
+        Element blockNumberElement = doc.createElement("node");
+        blockNumberElement.appendChild(doc.createTextNode(Integer.toString(getNodeId())));
+        messageElement.appendChild(blockNumberElement);
+
+        Element indexElement = doc.createElement("index");
+        indexElement.appendChild(doc.createTextNode(Integer.toString(getIndex())));
+        messageElement.appendChild(indexElement);
+
+        Element subIndexElement = doc.createElement("subIndex");
+        subIndexElement.appendChild(doc.createTextNode(Integer.toString(getSubIndex())));
+        messageElement.appendChild(subIndexElement);
+
+        Element dataType = doc.createElement("dataType");
+        dataType.appendChild(doc.createTextNode(getCanOpenDataType().name()));
+        messageElement.appendChild(dataType);
     }
 
 }

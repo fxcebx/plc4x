@@ -89,8 +89,8 @@ public class CANOpenPlcDriver extends GeneratedDriverBase<CANOpenFrame> {
         return new IEC61131ValueHandler() {
             @Override
             public PlcValue newPlcValue(PlcField field, Object[] values) {
-                if (values[0] instanceof byte[]) {
-                    return (PlcValue) values[0];
+                if (values[0] instanceof PlcList) {
+                    return (PlcList) values[0];
                 }
                 return super.newPlcValue(field, values);
             }

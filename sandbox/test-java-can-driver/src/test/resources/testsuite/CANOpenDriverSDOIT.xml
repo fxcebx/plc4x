@@ -103,14 +103,16 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <DefaultPlcReadResponse className="org.apache.plc4x.java.spi.messages.DefaultPlcReadResponse">
+        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
           <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
             <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
-              <nodeId>1</nodeId>
-              <index>1000</index>
-              <subIndex>22</subIndex>
-              <canOpenDataType>UNSIGNED32</canOpenDataType>
-              <answerNodeId>1</answerNodeId>
+              <CANOpenSDOField>
+                <nodeId>1</nodeId>
+                <index>1000</index>
+                <subIndex>22</subIndex>
+                <canOpenDataType>UNSIGNED32</canOpenDataType>
+                <answerNodeId>1</answerNodeId>
+              </CANOpenSDOField>
             </sdo1>
           </request>
           <sdo1>
@@ -120,7 +122,7 @@
               <object>1717859169</object>
             </value>
           </sdo1>
-        </DefaultPlcReadResponse>
+        </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
     </steps>
@@ -179,7 +181,7 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <DefaultPlcReadResponse className="org.apache.plc4x.java.spi.messages.DefaultPlcReadResponse">
+        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
           <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
             <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
               <nodeId>1</nodeId>
@@ -196,7 +198,7 @@
               <object>97</object>
             </value>
           </sdo1>
-        </DefaultPlcReadResponse>
+        </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
     </steps>
@@ -275,7 +277,7 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <DefaultPlcReadResponse className="org.apache.plc4x.java.spi.messages.DefaultPlcReadResponse">
+        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
           <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
             <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
               <nodeId>1</nodeId>
@@ -292,7 +294,7 @@
               <object>1717859169</object>
             </value>
           </sdo1>
-        </DefaultPlcReadResponse>
+        </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
     </steps>
@@ -433,7 +435,7 @@
       </incoming-plc-message>
 
       <api-response name="Report Read Response to application">
-        <DefaultPlcReadResponse className="org.apache.plc4x.java.spi.messages.DefaultPlcReadResponse">
+        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
           <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
             <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
               <nodeId>2</nodeId>
@@ -489,7 +491,7 @@
               </object>
             </value>
           </sdo1>
-        </DefaultPlcReadResponse>
+        </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
     </steps>
@@ -545,7 +547,7 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <DefaultPlcReadResponse className="org.apache.plc4x.java.spi.messages.DefaultPlcReadResponse">
+        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
           <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
             <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
               <nodeId>1</nodeId>
@@ -562,7 +564,7 @@
               <object>84082688</object>
             </value>
           </sdo1>
-        </DefaultPlcReadResponse>
+        </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
     </steps>

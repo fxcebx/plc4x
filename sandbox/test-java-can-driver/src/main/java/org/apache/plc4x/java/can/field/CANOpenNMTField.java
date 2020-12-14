@@ -20,6 +20,8 @@ package org.apache.plc4x.java.can.field;
 
 import org.apache.plc4x.java.api.exceptions.PlcInvalidFieldException;
 import org.apache.plc4x.java.canopen.readwrite.types.CANOpenService;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -61,4 +63,18 @@ public class CANOpenNMTField extends CANOpenField implements CANOpenSubscription
         return new CANOpenNMTField(nodeId);
     }
 
+    @Override
+    public void xmlSerialize(Element parent) {
+        Document doc = parent.getOwnerDocument();
+        Element messageElement = doc.createElement(getClass().getSimpleName());
+        parent.appendChild(messageElement);
+
+        Element blockNumberElement = doc.createElement("service");
+        blockNumberElement.appendChild(doc.createTextNode(getService().name()));
+        messageElement.appendChild(blockNumberElement);
+
+        Element nodeElement = doc.createElement("node");
+        nodeElement.appendChild(doc.createTextNode(Integer.toString(getNodeId())));
+        messageElement.appendChild(nodeElement);
+    }
 }
