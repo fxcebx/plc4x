@@ -18,7 +18,6 @@ under the License.
 */
 package org.apache.plc4x.java.can.protocol;
 
-import org.apache.commons.codec.binary.Hex;
 import org.apache.plc4x.java.api.messages.PlcReadRequest;
 import org.apache.plc4x.java.api.messages.PlcReadResponse;
 import org.apache.plc4x.java.api.messages.PlcSubscriptionEvent;
@@ -334,17 +333,7 @@ public class CANOpenProtocolLogic extends Plc4xProtocolBase<CANOpenFrame> implem
             } else if (service == CANOpenService.HEARTBEAT && payload instanceof CANOpenHeartbeatPayload) {
                 publishEvent(service, nodeId, payload);
             } else {
-                String hex = "";
-                if (logger.isInfoEnabled()) {
-                    try {
-                        final WriteBuffer buffer = new WriteBuffer(payload.getLengthInBytes(), true);
-                        CANOpenPayloadIO.staticSerialize(buffer, payload);
-                        hex = Hex.encodeHexString(buffer.getData());
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
-                }
-                logger.info("Decoded CANOpen {} from {}, message {}, {}", service, nodeId, payload, hex);
+                logger.debug("Decoded CANOpen {} from {}, message {}", service, nodeId, payload);
             }
         }
 

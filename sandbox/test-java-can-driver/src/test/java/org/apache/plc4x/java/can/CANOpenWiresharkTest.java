@@ -16,7 +16,6 @@
   specific language governing permissions and limitations
   under the License.
 */
-
 package org.apache.plc4x.java.can;
 
 import org.apache.plc4x.test.parserserializer.ParserSerializerTestsuiteRunner;
@@ -24,7 +23,7 @@ import org.apache.plc4x.test.parserserializer.ParserSerializerTestsuiteRunner;
 public class CANOpenWiresharkTest extends ParserSerializerTestsuiteRunner {
 
     public CANOpenWiresharkTest() {
-        super("/testsuite/CANOpenWiresharkTestSuite.xml");
+        super("/protocols/can/CANOpenWiresharkTestSuite.xml");
     }
 
 }

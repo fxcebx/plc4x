@@ -51,7 +51,7 @@ public class CANOpenPlcDriver extends GeneratedDriverBase<CANOpenFrame> {
 
     @Override
     public String getProtocolName() {
-        return "CAN Open";
+        return "CAN open";
     }
 
     @Override

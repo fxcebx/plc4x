@@ -16,7 +16,6 @@
   specific language governing permissions and limitations
   under the License.
 */
-
 package org.apache.plc4x.java.can;
 
 import org.apache.plc4x.test.parserserializer.ParserSerializerTestsuiteRunner;
@@ -24,7 +23,7 @@ import org.apache.plc4x.test.parserserializer.ParserSerializerTestsuiteRunner;
 public class SocketCAN20ATest extends ParserSerializerTestsuiteRunner {
 
     public SocketCAN20ATest() {
-        super("/testsuite/SocketCAN20ATestSuite.xml");
+        super("/protocols/can/SocketCAN20ATestSuite.xml");
     }
 
 }

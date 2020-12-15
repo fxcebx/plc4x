@@ -103,25 +103,24 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
-          <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
-            <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
-              <CANOpenSDOField>
-                <nodeId>1</nodeId>
-                <index>1000</index>
-                <subIndex>22</subIndex>
-                <canOpenDataType>UNSIGNED32</canOpenDataType>
-                <answerNodeId>1</answerNodeId>
-              </CANOpenSDOField>
+        <PlcReadResponse>
+          <PlcReadRequest>
+            <fields>
+              <sdo1>
+                <CANOpenSDOField>
+                  <node>1</node>
+                  <index>1000</index>
+                  <subIndex>22</subIndex>
+                  <dataType>UNSIGNED32</dataType>
+                </CANOpenSDOField>
+              </sdo1>
+            </fields>
+          </PlcReadRequest>
+          <values>
+            <sdo1 result="OK">
+              <PlcUDINT>1717859169</PlcUDINT>
             </sdo1>
-          </request>
-          <sdo1>
-            <code>OK</code>
-            <value className="org.apache.plc4x.java.api.value.PlcUDINT">
-              <object>java.lang.Long</object>
-              <object>1717859169</object>
-            </value>
-          </sdo1>
+          </values>
         </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
@@ -181,23 +180,24 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
-          <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
-            <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
-              <nodeId>1</nodeId>
-              <index>9186</index>
-              <subIndex>1</subIndex>
-              <canOpenDataType>UNSIGNED8</canOpenDataType>
-              <answerNodeId>1</answerNodeId>
+        <PlcReadResponse>
+          <PlcReadRequest>
+            <fields>
+              <sdo1>
+                <CANOpenSDOField>
+                  <node>1</node>
+                  <index>9186</index>
+                  <subIndex>1</subIndex>
+                  <dataType>UNSIGNED8</dataType>
+                </CANOpenSDOField>
+              </sdo1>
+            </fields>
+          </PlcReadRequest>
+          <values>
+            <sdo1 result="OK">
+              <PlcUSINT>97</PlcUSINT>
             </sdo1>
-          </request>
-          <sdo1>
-            <code>OK</code>
-            <value className="org.apache.plc4x.java.api.value.PlcUSINT">
-              <object>java.lang.Short</object>
-              <object>97</object>
-            </value>
-          </sdo1>
+          </values>
         </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
@@ -277,23 +277,24 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
-          <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
-            <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
-              <nodeId>1</nodeId>
-              <index>1000</index>
-              <subIndex>22</subIndex>
-              <canOpenDataType>UNSIGNED32</canOpenDataType>
-              <answerNodeId>2</answerNodeId>
+        <PlcReadResponse>
+          <PlcReadRequest>
+            <fields>
+              <sdo1>
+                <CANOpenSDOField>
+                  <node>1</node>
+                  <index>1000</index>
+                  <subIndex>22</subIndex>
+                  <dataType>UNSIGNED32</dataType>
+                </CANOpenSDOField>
+              </sdo1>
+            </fields>
+          </PlcReadRequest>
+          <values>
+            <sdo1 result="OK">
+              <PlcUDINT>1717859169</PlcUDINT>
             </sdo1>
-          </request>
-          <sdo1>
-            <code>OK</code>
-            <value className="org.apache.plc4x.java.api.value.PlcUDINT">
-              <object>java.lang.Long</object>
-              <object>1717859169</object>
-            </value>
-          </sdo1>
+          </values>
         </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
@@ -435,62 +436,33 @@
       </incoming-plc-message>
 
       <api-response name="Report Read Response to application">
-        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
-          <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
-            <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
-              <nodeId>2</nodeId>
-              <index>2000</index>
-              <subIndex>44</subIndex>
-              <canOpenDataType>RECORD</canOpenDataType>
-              <answerNodeId>2</answerNodeId>
+        <PlcReadResponse>
+          <PlcReadRequest>
+            <fields>
+              <sdo1>
+                <CANOpenSDOField>
+                  <node>2</node>
+                  <index>2000</index>
+                  <subIndex>44</subIndex>
+                  <dataType>RECORD</dataType>
+                </CANOpenSDOField>
+              </sdo1>
+            </fields>
+          </PlcReadRequest>
+          <values>
+            <sdo1 result="OK">
+              <PlcList>
+                <PlcSINT>97</PlcSINT>
+                <PlcSINT>115</PlcSINT>
+                <PlcSINT>100</PlcSINT>
+                <PlcSINT>102</PlcSINT>
+                <PlcSINT>97</PlcSINT>
+                <PlcSINT>115</PlcSINT>
+                <PlcSINT>100</PlcSINT>
+                <PlcSINT>102</PlcSINT>
+              </PlcList>
             </sdo1>
-          </request>
-          <sdo1>
-            <code>OK</code>
-            <value className="org.apache.plc4x.java.api.value.PlcList">
-              <object>java.util.Collections..UnmodifiableRandomAccessList</object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>97</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>115</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>100</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>102</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>97</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>115</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>100</object>
-              </object>
-              <object>org.apache.plc4x.java.api.value.PlcSINT</object>
-              <object>
-                <object>java.lang.Byte</object>
-                <object>102</object>
-              </object>
-            </value>
-          </sdo1>
+          </values>
         </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
@@ -547,23 +519,24 @@
         </CANOpenSocketCANFrame>
       </incoming-plc-message>
       <api-response name="Report Read Response to application">
-        <PlcReadResponse className="org.apache.plc4x.java.spi.messages.PlcReadResponse">
-          <request className="org.apache.plc4x.java.spi.messages.DefaultPlcReadRequest">
-            <sdo1 className="org.apache.plc4x.java.can.field.CANOpenSDOField">
-              <nodeId>1</nodeId>
-              <index>1000</index>
-              <subIndex>22</subIndex>
-              <canOpenDataType>UNSIGNED32</canOpenDataType>
-              <answerNodeId>1</answerNodeId>
+        <PlcReadResponse>
+          <PlcReadRequest>
+            <fields>
+              <sdo1>
+                <CANOpenSDOField>
+                  <node>1</node>
+                  <index>1000</index>
+                  <subIndex>22</subIndex>
+                  <dataType>UNSIGNED32</dataType>
+                </CANOpenSDOField>
+              </sdo1>
+            </fields>
+          </PlcReadRequest>
+          <values>
+            <sdo1 result="REMOTE_ERROR">
+              <PlcLINT>84082688</PlcLINT>
             </sdo1>
-          </request>
-          <sdo1>
-            <code>REMOTE_ERROR</code>
-            <value className="org.apache.plc4x.java.api.value.PlcLINT">
-              <object>java.lang.Long</object>
-              <object>84082688</object>
-            </value>
-          </sdo1>
+          </values>
         </PlcReadResponse>
       </api-response>
       <delay>1000</delay>
